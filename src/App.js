@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import Navigation from "./components/Navigation.jsx";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Navigation />
-        <Routes></Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );
