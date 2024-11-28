@@ -3,7 +3,7 @@ import React from "react";
 const Lodin = () => {
   return (
     <>
-      <div className="relative items-center block min-h-[70vh] p-6  w-screen  shadow-md dark:bg-transparent ">
+      <div className="bg-transparent relative items-center block min-h-[70vh]  w-full  shadow-md">
         <div
           role="status"
           className="absolute -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2"

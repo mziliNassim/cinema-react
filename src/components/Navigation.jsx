@@ -32,7 +32,7 @@ const Navigation = () => {
               className="h-8"
               alt="Flowbite Logo"
             />
-            <span className="text-2xl font-semibold text-blue-400 whitespace-nowrap">
+            <span className="text-2xl font-semibold text-cyan-400 whitespace-nowrap">
               CinemA
             </span>
           </Link>
@@ -42,7 +42,7 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/"
-                className="block px-3 py-2 text-white rounded active:text-blue-400 hover:text-blue-400 md:bg-transparent md:p-0 "
+                className="block px-3 py-2 text-white rounded active:text-cyan-400 hover:text-cyan-400 md:bg-transparent md:p-0 "
               >
                 Home
               </NavLink>
@@ -50,7 +50,7 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/movies"
-                className="block px-3 py-2 text-white rounded hover:text-blue-400 active:text-blue-700 md:bg-transparent md:p-0 "
+                className="block px-3 py-2 text-white rounded hover:text-cyan-400 active:text-cyan-400 md:bg-transparent md:p-0 "
               >
                 Movies
               </NavLink>
@@ -135,31 +135,31 @@ const Navigation = () => {
                       type="button"
                       data-dropdown-toggle="userDropdown"
                       data-dropdown-placement="bottom-start"
-                      class="w-10 h-10 rounded-full cursor-pointer p-1 ring-2 ring-gray-300 dark:ring-gray-500"
+                      className="w-10 h-10 p-1 rounded-full cursor-pointer ring-2 ring-gray-300 dark:ring-gray-500"
                       src={avatar}
                       alt="User dropdown"
                     />
 
                     <div
                       id="userDropdown"
-                      class={`${
+                      className={`${
                         dropListUser && "hidden"
                       } z-10  absolute right-0 top-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600`}
                     >
-                      <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                      <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                         <div>Bonnie Green</div>
-                        <div class="font-medium truncate">
+                        <div className="font-medium truncate">
                           name@flowbite.com
                         </div>
                       </div>
                       <ul
-                        class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        className="py-2 text-sm text-gray-700 dark:text-gray-200"
                         aria-labelledby="avatarButton"
                       >
                         <li>
                           <Link
                             to="/user/profile"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
                             Profile
                           </Link>
@@ -167,16 +167,16 @@ const Navigation = () => {
                         <li>
                           <Link
                             to="/user/favorites"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
                             Favorites
                           </Link>
                         </li>
                       </ul>
-                      <div class="py-1">
+                      <div className="py-1">
                         <Link
                           to="/Logout"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                         >
                           Sign out
                         </Link>
@@ -187,7 +187,7 @@ const Navigation = () => {
                   <Link
                     to="/sign"
                     type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-0 w-full py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="w-full px-0 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Sign IN
                   </Link>

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import useFetchAxios from "../../hooks/useFetchAxios";
-import { movieUrlPopulaire } from "../../data/data";
+import useFetchAxios from "../../hooks/useFetchAxios.js";
+import { movieUrlPopulaire } from "../../data/data.js";
 
 import Lodin from "../Loding.jsx";
 
@@ -27,7 +27,8 @@ const responsive = {
 };
 
 const CarouselCard = () => {
-  const { data, loading } = useFetchAxios(movieUrlPopulaire);
+  const { data, loading, error } = useFetchAxios(movieUrlPopulaire);
+  console.log("CarouselCard ~ error:", error);
 
   return (
     <>
@@ -46,7 +47,7 @@ const CarouselCard = () => {
             partialVisible={false}
             dotListClass="custom-dot-list-style"
           >
-            {data &&
+            {data !== null &&
               data.results.map((card, index) => {
                 return (
                   <div className="p-0 mx-1 slider" key={index}>

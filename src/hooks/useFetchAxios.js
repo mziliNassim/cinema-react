@@ -16,7 +16,7 @@ const useFetchAxios = (url, method = "GET", option = options.details) => {
           setData(res.data);
           setError(null);
         })
-        .catch((err) => setError(err.meassage))
+        .catch((err) => setError(err))
         .finally(() => setLoading(false));
     };
 
