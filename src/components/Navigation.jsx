@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
 
 import avatar from "../img/avatar.png";
@@ -20,6 +20,14 @@ const Navigation = () => {
       else navigate(`/tvshows?search=${serchTerm}`);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [location]);
 
   return (
     <>
