@@ -2,10 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    alert("d<g");
+  };
+
   return (
     <>
       <div className="min-h-[85vh] flex items-center justify-center p-2">
-        <form className="w-full p-10 mx-auto border md:w-8/12 xl:w-5/12 rounded-3xl border-cyan-400">
+        <form
+          onSubmit={handelSubmit}
+          className="w-full p-10 mx-auto border md:w-8/12 xl:w-5/12 rounded-3xl border-cyan-400"
+        >
           <h1 className="mb-8 text-5xl font-semibold text-cyan-400">Login!</h1>
           <p className="mb-5 font-semibold text-gray-300 text-balanc">
             Don't have Acount{" "}
@@ -65,7 +73,7 @@ const Login = () => {
               for="remember"
               class="ms-2 text-sm font-medium text-gray-500 "
             >
-              Remember!
+              Remember me!
             </label>
           </div>
 

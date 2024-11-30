@@ -192,13 +192,16 @@ const Navigation = () => {
                     </div>
                   </>
                 ) : (
-                  <Link
-                    to="/user/login"
-                    type="button"
-                    className="w-full px-0 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    Sign IN
-                  </Link>
+                  <>
+                    <Link
+                      to="/user/login"
+                      class="relative text-center w-full inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-2 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
+                    >
+                      <span class=" w-full px-1 py-1.5 transition-all ease-in duration-75 text-cyan-400 hover:text-white bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        Login
+                      </span>
+                    </Link>
+                  </>
                 )}
               </>
             </div>

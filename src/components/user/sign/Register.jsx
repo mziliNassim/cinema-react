@@ -2,10 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    alert("d<g");
+  };
+
   return (
     <>
       <div className="min-h-[85vh] flex items-center justify-center p-2">
-        <form className="w-full p-10 mx-auto border md:w-8/12 xl:w-5/12 rounded-3xl border-cyan-400">
+        <form
+          onSubmit={handelSubmit}
+          className="w-full p-10 mx-auto border md:w-8/12 xl:w-5/12 rounded-3xl border-cyan-400"
+        >
           <h1 className="mb-8 text-5xl font-semibold text-cyan-400">
             Register!
           </h1>
