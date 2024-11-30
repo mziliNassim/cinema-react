@@ -5,6 +5,8 @@ import TrendMovies from "./TrendMovies.jsx";
 import RecomendedMovies from "./RecomendedMovies.jsx";
 import Peaples from "./Peaples.jsx";
 
+import { movieUrlTrendsDay, movieUrlTrendsWeek } from "../../data/movies.js";
+
 const Home = () => {
   return (
     <>
@@ -16,8 +18,8 @@ const Home = () => {
           <div className="grid grid-cols-1 gap-4 my-0 md:grid-cols-3">
             {/* Trend Movie */}
             <div className="col-span-1">
-              <TrendMovies type="day" />
-              <TrendMovies type="week" />
+              <TrendMovies type="day" url={movieUrlTrendsDay} />
+              <TrendMovies type="week" url={movieUrlTrendsWeek} />
             </div>
 
             {/* Recomended Movies */}

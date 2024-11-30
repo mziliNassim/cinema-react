@@ -29,33 +29,8 @@ export const options = {
   },
 };
 
-// // Movies Filter Options ===================
-// const include_adult = false;
-// const include_video = true;
-// const language = "en-US";
-// const page = 1;
-// const sort_by = "popularity.des";
-// const include_null_first_air_dates = false;
-
-// // 'Discover' Movies or TV Shows API URL ===================
-// export const moviesUrl = `https://api.themoviedb.org/3/discover/movie?include_adult=${include_adult}`;
-// export const tvUrl = `https://api.themoviedb.org/3/discover/tv?include_adult=${include_video}`;
-
-// // 'Search' Movies or TV Shows API URL by  ===================
-// export const moviesUrlBySearch = `https://api.themoviedb.org/3/search/movie?api_key=cf9892ca71586d065851294c03ef7f51`;
-// export const tvUrlBySearch = `https://api.themoviedb.org/3/search/tv?&include_adult=${include_adult}&language=${language}`;
-
-// // Movies API URL Details by ID ===================
-// export const movieUrlDetailsById = `https://api.themoviedb.org/3/movie/`;
-
-// Movies API URL Populaire ===================
-export const movieUrlPopulaire = `https://api.themoviedb.org/3/movie/popular`;
-
-// // Movies API URL Populaire ===================
-// export const movieUrlTopRated = `https://api.themoviedb.org/3/movie/top_rated`;
-
-// // Populair People API URL  ===================
-// export const peopleUrlPopulair = `https://api.themoviedb.org/3/person/popular`;
+// Populair People API URL  ===================
+export const peopleUrlPopulair = `https://api.themoviedb.org/3/person/popular`;
 
 // // ===================
 
