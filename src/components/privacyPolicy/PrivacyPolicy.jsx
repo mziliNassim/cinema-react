@@ -3,112 +3,107 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <>
-      <div class="text-gray-200 font-sans">
-        <div class="max-w-4xl mx-auto p-6 text-white rounded-lg shadow-lg mt-10">
-          <h1 class="text-3xl font-bold text-gray-100 mb-4">
-            Politique de Confidentialité
+      <div className="font-sans text-gray-200">
+        <div className="max-w-4xl p-6 mx-auto mt-10 text-white rounded-lg shadow-lg">
+          <h1 className="mb-4 text-3xl font-bold text-gray-100">
+            Privacy Policy
           </h1>
-          <p class="text-sm text-gray-400 mb-6">
-            {/* Dernière mise à jour : <span class="font-semibold">11/2024</span> */}
+          <p className="mb-6 text-sm text-gray-400">
+            {/* Last updated: <span className="font-semibold">11/2024</span> */}
           </p>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              1. Collecte des informations
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              1. Information Collection
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Nous collectons certaines données nécessaires pour vous offrir une
-              expérience optimale :
+            <p className="leading-relaxed text-gray-300">
+              We collect certain data necessary to provide you with an optimal
+              experience:
             </p>
-            <ul class="list-disc ml-6 mt-3 text-gray-300">
+            <ul className="mt-3 ml-6 text-gray-300 list-disc">
               <li>
-                <span class="font-medium">Données non personnelles :</span>{" "}
-                informations sur votre appareil, type de navigateur, langue, et
-                préférences d'utilisation.
+                <span className="font-medium">Non-personal data:</span>{" "}
+                information about your device, browser type, language, and usage
+                preferences.
               </li>
               <li>
-                <span class="font-medium">Données personnelles :</span> si vous
-                créez un compte, nous collectons votre adresse e-mail, votre nom
-                d'utilisateur et toute autre information que vous fournissez
-                volontairement.
+                <span className="font-medium">Personal data:</span> if you
+                create an account, we collect your email address, username, and
+                any other information you voluntarily provide.
               </li>
             </ul>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              2. Utilisation des informations
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              2. Use of Information
             </h2>
-            <ul class="list-disc ml-6 mt-3 text-gray-300">
-              <li>Fournir une navigation fluide et personnalisée.</li>
-              <li>Améliorer nos services et fonctionnalités.</li>
-              <li>Vous informer des nouveautés ou mises à jour.</li>
+            <ul className="mt-3 ml-6 text-gray-300 list-disc">
+              <li>Provide smooth and personalized navigation.</li>
+              <li>Improve our services and features.</li>
+              <li>Inform you of new features or updates.</li>
             </ul>
-            <p class="text-gray-300 mt-3">
-              Nous ne vendons ni ne louons vos données à des tiers.
+            <p className="mt-3 text-gray-300">
+              We do not sell or rent your data to third parties.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              3. Partage des données
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              3. Data Sharing
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Vos données peuvent être partagées avec :
+            <p className="leading-relaxed text-gray-300">
+              Your data may be shared with:
             </p>
-            <ul class="list-disc ml-6 mt-3 text-gray-300">
+            <ul className="mt-3 ml-6 text-gray-300 list-disc">
               <li>
-                Nos partenaires techniques pour assurer la maintenance et
-                l'amélioration de l'application.
+                Our technical partners to ensure the maintenance and improvement
+                of the application.
               </li>
-              <li>Des autorités légales si la loi l'exige.</li>
+              <li>Legal authorities if required by law.</li>
             </ul>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              4. Cookies et technologies similaires
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              4. Cookies and Similar Technologies
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Nous utilisons des cookies pour :
-            </p>
-            <ul class="list-disc ml-6 mt-3 text-gray-300">
-              <li>Analyser l'utilisation de l'application.</li>
-              <li>Se souvenir de vos préférences.</li>
+            <p className="leading-relaxed text-gray-300">We use cookies to:</p>
+            <ul className="mt-3 ml-6 text-gray-300 list-disc">
+              <li>Analyze the use of the application.</li>
+              <li>Remember your preferences.</li>
             </ul>
-            <p class="text-gray-300 mt-3">
-              Vous pouvez gérer vos préférences ou désactiver les cookies via
-              les paramètres de votre navigateur.
+            <p className="mt-3 text-gray-300">
+              You can manage your preferences or disable cookies through your
+              browser settings.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              5. Sécurité des données
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              5. Data Security
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Nous mettons en œuvre des mesures de sécurité techniques et
-              organisationnelles pour protéger vos informations contre tout
-              accès non autorisé, perte ou modification.
+            <p className="leading-relaxed text-gray-300">
+              We implement technical and organizational security measures to
+              protect your information from unauthorized access, loss, or
+              alteration.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              6. Vos droits
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              6. Your Rights
             </h2>
-            <ul class="list-disc ml-6 mt-3 text-gray-300">
-              <li>Accès à vos informations.</li>
-              <li>Modification ou suppression de vos données.</li>
-              <li>
-                Opposition à leur utilisation pour des finalités spécifiques.
-              </li>
+            <ul className="mt-3 ml-6 text-gray-300 list-disc">
+              <li>Access your information.</li>
+              <li>Modify or delete your data.</li>
+              <li>Object to their use for specific purposes.</li>
             </ul>
-            <p class="text-gray-300 mt-3">
-              Pour exercer ces droits, veuillez nous contacter à{" "}
+            <p className="mt-3 text-gray-300">
+              To exercise these rights, please contact us at{" "}
               <a
                 href="mailto:mzilinassim@gmail.com"
-                class="text-blue-500 underline"
+                className="text-blue-500 underline"
               >
                 mzilinassim@gmail.com
               </a>
@@ -117,13 +112,13 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              7. Modifications de cette politique
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              7. Changes to This Policy
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Nous pouvons mettre à jour cette Politique de confidentialité pour
-              refléter des changements dans nos pratiques ou pour des raisons
-              légales. Toute modification sera publiée ici et datée.
+            <p className="leading-relaxed text-gray-300">
+              We may update this Privacy Policy to reflect changes in our
+              practices or for legal reasons. Any changes will be posted here
+              and dated.
             </p>
           </section>
         </div>

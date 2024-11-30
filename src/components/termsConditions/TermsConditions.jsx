@@ -3,100 +3,95 @@ import React from "react";
 const TermsConditions = () => {
   return (
     <>
-      <div class="text-gray-200 font-sans">
-        <div class="max-w-4xl mx-auto p-6 rounded-lg shadow-lg mt-10">
-          <h1 class="text-3xl font-bold text-gray-100 mb-4">
-            Conditions Générales d'Utilisation
+      <div className="font-sans text-gray-200">
+        <div className="max-w-4xl p-6 mx-auto mt-10 rounded-lg shadow-lg">
+          <h1 className="mb-4 text-3xl font-bold text-gray-100">
+            Terms and Conditions of Use
           </h1>
-          <p class="text-sm text-gray-400 mb-6">
-            {/* Dernière mise à jour : <span class="font-semibold">11/2024</span> */}
+          <p className="mb-6 text-sm text-gray-400">
+            {/* Last updated: <span className="font-semibold">11/2024</span> */}
           </p>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
               1. Introduction
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              En utilisant notre application web dédiée à la découverte de films
-              et de séries TV, vous acceptez les présentes Conditions Générales
-              d'Utilisation (CGU). Veuillez les lire attentivement avant
-              d'utiliser nos services.
+            <p className="leading-relaxed text-gray-300">
+              By using our web application dedicated to discovering movies and
+              TV shows, you agree to these Terms and Conditions of Use (TCU).
+              Please read them carefully before using our services.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              2. Accès au service
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              2. Access to Service
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Notre application est disponible pour tous les utilisateurs
-              disposant d'une connexion Internet. Nous nous réservons le droit
-              de limiter ou de suspendre l'accès au service pour des raisons de
-              maintenance, mise à jour, ou en cas de non-respect des présentes
-              CGU.
+            <p className="leading-relaxed text-gray-300">
+              Our application is available to all users with an internet
+              connection. We reserve the right to limit or suspend access to the
+              service for maintenance, updates, or in case of non-compliance
+              with these TCU.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              3. Propriété intellectuelle
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              3. Intellectual Property
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Tout le contenu de l'application, y compris les textes,
-              graphiques, logos, et images, est protégé par les lois sur la
-              propriété intellectuelle. Toute reproduction, modification ou
-              distribution sans autorisation est strictement interdite.
+            <p className="leading-relaxed text-gray-300">
+              All content of the application, including texts, graphics, logos,
+              and images, is protected by intellectual property laws. Any
+              reproduction, modification, or distribution without authorization
+              is strictly prohibited.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              4. Utilisation acceptable
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              4. Acceptable Use
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Vous vous engagez à utiliser notre application uniquement à des
-              fins personnelles et non commerciales. Toute utilisation abusive,
-              comme l'accès non autorisé, la modification des fonctionnalités,
-              ou le téléchargement illégal de contenu, est strictement
-              interdite.
+            <p className="leading-relaxed text-gray-300">
+              You agree to use our application solely for personal and
+              non-commercial purposes. Any abusive use, such as unauthorized
+              access, modification of features, or illegal downloading of
+              content, is strictly prohibited.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              5. Limitation de responsabilité
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              5. Limitation of Liability
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Bien que nous nous efforcions de fournir un service fiable, nous
-              ne pouvons garantir l'exactitude ou la disponibilité continue des
-              données fournies. Nous ne serons pas tenus responsables des
-              dommages directs ou indirects résultant de l'utilisation de
-              l'application.
+            <p className="leading-relaxed text-gray-300">
+              While we strive to provide a reliable service, we cannot guarantee
+              the accuracy or continuous availability of the data provided. We
+              will not be held liable for any direct or indirect damages
+              resulting from the use of the application.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
-              6. Modification des CGU
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
+              6. Modification of TCU
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Nous nous réservons le droit de modifier ces CGU à tout moment.
-              Les modifications seront publiées ici et prendront effet
-              immédiatement. Nous vous invitons à consulter régulièrement cette
-              page.
+            <p className="leading-relaxed text-gray-300">
+              We reserve the right to modify these TCU at any time. Changes will
+              be posted here and take effect immediately. We invite you to
+              regularly check this page.
             </p>
           </section>
 
-          <section class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-200 mb-2">
+          <section className="mb-6">
+            <h2 className="mb-2 text-2xl font-semibold text-gray-200">
               7. Contact
             </h2>
-            <p class="text-gray-300 leading-relaxed">
-              Pour toute question ou préoccupation concernant ces CGU, veuillez
-              nous contacter à{" "}
+            <p className="leading-relaxed text-gray-300">
+              For any questions or concerns regarding these TCU, please contact
+              us at{" "}
               <a
                 href="mailto:mzilinassim@gmail.com"
-                class="text-blue-500 underline"
+                className="text-blue-500 underline"
               >
                 mzilinassim@gmail.com
               </a>
@@ -104,9 +99,9 @@ const TermsConditions = () => {
             </p>
           </section>
 
-          <p class="text-sm text-gray-500 mt-8">
-            En continuant à utiliser notre application, vous reconnaissez avoir
-            lu, compris et accepté ces Conditions Générales d'Utilisation.
+          <p className="mt-8 text-sm text-gray-500">
+            By continuing to use our application, you acknowledge that you have
+            read, understood, and accepted these Terms and Conditions of Use.
           </p>
         </div>
       </div>
