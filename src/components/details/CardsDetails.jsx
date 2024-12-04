@@ -84,15 +84,14 @@ const CardsDetails = () => {
                 <LazyLoadImage
                   src={`https://image.tmdb.org/t/p/w500/${card?.backdrop_path}`}
                   alt={card?.title}
-                  height={"500px"}
+                  height={"100%"}
                   width={"100%"}
-                  effect="blur"
                   className=" z-0 rounded"
                 />
                 <div className="absolute w-full h-full rounded p-5 top-0 left-0 z-50">
                   <div className="bg-transparent flex items-start justify-between w-full h-full rounded backdrop-blur-lg">
                     {/* Left sid (poster image) */}
-                    <img
+                    <LazyLoadImage
                       src={`https://image.tmdb.org/t/p/w500/${card?.poster_path}`}
                       alt={card?.title}
                       className="W-full h-full rounded"

@@ -83,7 +83,7 @@ const RecomendedMovies = () => {
                   {/* <PaginationBar pageCount="10" /> */}
                   <div className="col-span-4">
                     <p
-                      onClick={() => navigate("/movies/1/")}
+                      onClick={() => navigate("/movies/")}
                       className="w-fit py-1 cursor-pointer px-4 my-5 mx-auto bg-gray-50 text-black rounded"
                     >
                       Show more...
