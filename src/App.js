@@ -10,6 +10,8 @@ import TermsConditions from "./components/termsConditions/TermsConditions.jsx";
 
 import Register from "./components/user/sign/Register.jsx";
 import Login from "./components/user/sign/Login.jsx";
+import CardsDetails from "./components/details/CardsDetails.jsx";
+import Movies from "./components/movies/Cards.jsx";
 
 const App = () => {
   return (
@@ -19,6 +21,12 @@ const App = () => {
         <Routes>
           <Route path="/" element=<Home /> />
           <Route path="*" element=<NotFound /> />
+
+          <Route path="/movies" element=<Movies type="movie" /> />
+          <Route path="/tvshows" element=<Movies type="tvshow" /> />
+
+          <Route path="/movies/movie" element=<CardsDetails /> />
+          <Route path="/tvshows/tvshow" element=<CardsDetails /> />
 
           <Route path="/about">
             <Route path="" element=<NotFound /> />
