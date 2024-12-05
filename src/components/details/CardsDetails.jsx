@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { Card, Button } from "react-bootstrap";
 import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 
@@ -13,7 +12,7 @@ const CardsDetails = () => {
   const [url, setUrl] = useState(null);
   const [card, setCard] = useState({});
   const [type, setType] = useState("");
-  const [textColor, setTextColor] = useState("#FFF");
+  const [textColor] = useState("#FFF");
   const location = useLocation();
 
   // get ID value
@@ -39,7 +38,6 @@ const CardsDetails = () => {
         .get(url, options.details)
         .then((res) => {
           setCard(res.data);
-          console.log("useEffect ~ res.data:", res.data);
         })
         .catch((err) => console.error("err : ", err.message))
         .finally(() => setLoding(false));
@@ -79,7 +77,7 @@ const CardsDetails = () => {
           </div>
         ) : (
           card && (
-            <div className="p-0 m-0 flex items-center justify-between w-full">
+            <div className="min-h-[85vh] p-0 m-0 flex items-center justify-between w-full">
               <div className="flex relative items-center justify-between w-full max-w-screen-xl my-10 mx-auto">
                 <LazyLoadImage
                   src={`https://image.tmdb.org/t/p/w500/${card?.backdrop_path}`}
@@ -187,7 +185,7 @@ const CardsDetails = () => {
                           }
                           className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600  focus:ring-4 focus:outline-none focus:ring-green-200"
                         >
-                          <span class="relative text-xl mx-1 px-5 py-2.5 transition-all ease-in duration-75  bg-black rounded-md group-hover:bg-opacity-0">
+                          <span className="relative text-xl mx-1 px-5 py-2.5 transition-all ease-in duration-75  bg-black rounded-md group-hover:bg-opacity-0">
                             <i className="bi bi-play-circle-fill fs-4 mx-1"></i>
                             <span>WATCH</span>
                           </span>

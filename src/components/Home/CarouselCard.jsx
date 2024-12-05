@@ -6,7 +6,6 @@ import "react-multi-carousel/lib/styles.css";
 import useFetchAxios from "../../hooks/useFetchAxios.js";
 import { movieUrlPopulaire } from "../../data/movies.js";
 
-import Lodin from "../Loding.jsx";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const responsive = {
@@ -28,14 +27,12 @@ const responsive = {
 };
 
 const CarouselCard = () => {
-  const { data, loading, error } = useFetchAxios(movieUrlPopulaire);
-
+  const { data, loading } = useFetchAxios(movieUrlPopulaire);
   return (
     <>
       {loading ? (
-        // <Lodin />
         <>
-          <div className="my-5">
+          <div className="my-5 min-h-[50vh]">
             <Carousel
               responsive={responsive}
               autoPlay={true}
@@ -74,7 +71,7 @@ const CarouselCard = () => {
         </>
       ) : (
         <>
-          <div className="my-5">
+          <div className="my-5  min-h-[50vh]">
             <Carousel
               responsive={responsive}
               autoPlay={true}

@@ -10,7 +10,7 @@ const include_adult = false;
 export const moviesUrl = `https://api.themoviedb.org/3/discover/movie?include_adult=${include_adult}`;
 
 // 'Search' Movies API URL by  ===================
-export const moviesUrlBySearch = `https://api.themoviedb.org/3/search/movie?api_key=cf9892ca71586d065851294c03ef7f51`;
+export const moviesUrlBySearch = `https://api.themoviedb.org/3/search/movie?api_key=cf9892ca71586d065851294c03ef7f51&query=`;
 
 // Movies API URL Details by ID ===================
 export const movieUrlDetailsById = `https://api.themoviedb.org/3/movie/`;

@@ -110,10 +110,14 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2024{" "}
-              <Link to="/" className="hover:underline">
-                Nassim MZILI™
+              <Link
+                to="https://nassim.online/"
+                target="_blank"
+                className="underline text-cyan-400"
+              >
+                Nassim MZILI
               </Link>
-              . All Rights Reserved.
+              ™. All Rights Reserved.
             </span>
 
             <div className="flex items-center mt-4 sm:justify-center sm:mt-0">

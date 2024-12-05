@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import useFetchAxios from "../../hooks/useFetchAxios";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const TrendMovies = ({ type, url }) => {
+const Trend = ({ type, url }) => {
   const { data, loading } = useFetchAxios(url);
 
   return (
     <>
       {loading ? (
-        <div className="">
+        <div className="min-h-[50vh]">
           <h1 className="flex items-center justify-start gap-2 my-8 text-2xl font-bold text-white">
             <i className="bi bi-stars"></i>
             <span>Movies Of {type === "day" ? "The Day" : "The Week"}</span>
@@ -67,7 +67,7 @@ const TrendMovies = ({ type, url }) => {
       ) : (
         data.results.length > 0 && (
           <>
-            <div className="">
+            <div className="min-h-[50vh]">
               <h1 className="flex items-center justify-start gap-2 my-8 text-2xl font-bold text-white">
                 <i className="bi bi-stars"></i>
                 <span className="capitalize">{type} Of The Week</span>
@@ -89,7 +89,11 @@ const TrendMovies = ({ type, url }) => {
                   </div>
                   <div className="flex items-center justify-center gap-4">
                     <Link
-                      to="/Watch"
+                      to={
+                        (type === "movie"
+                          ? "/movies/movie?id="
+                          : "/tvshows/tvshow?id=") + data.results[0]?.id
+                      }
                       className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
                     >
                       <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 flex items-center gap-2 justify-center">
@@ -97,7 +101,8 @@ const TrendMovies = ({ type, url }) => {
                         Watch
                       </span>
                     </Link>
-                    <Link
+
+                    {/* <Link
                       to="/addToWatchList"
                       className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
                     >
@@ -105,9 +110,10 @@ const TrendMovies = ({ type, url }) => {
                         <i className="bi bi-patch-plus-fill"></i>
                         <span>Add To Watch List</span>
                       </span>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
+
                 {/* Rate */}
                 <div className="absolute top-0 right-0 flex items-center gap-2 px-2 py-1">
                   <i className="text-4xl text-yellow-400 bi bi-star-fill"></i>
@@ -135,4 +141,4 @@ const TrendMovies = ({ type, url }) => {
   );
 };
 
-export default TrendMovies;
+export default Trend;

@@ -10,7 +10,7 @@ const language = "en-US";
 export const tvUrl = `https://api.themoviedb.org/3/discover/tv?include_adult=${include_video}`;
 
 // 'Search' TV Shows API URL by  ===================
-export const tvUrlBySearch = `https://api.themoviedb.org/3/search/tv?&include_adult=${include_adult}&language=${language}`;
+export const tvUrlBySearch = `https://api.themoviedb.org/3/search/tv?&include_adult=${include_adult}&language=${language}&query=`;
 
 // Movies API URL Details by ID ===================
 export const tvShowsUrlDetailsById = `https://api.themoviedb.org/3/tv/`;

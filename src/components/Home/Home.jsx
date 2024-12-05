@@ -3,10 +3,9 @@ import React from "react";
 import CarouselCard from "./CarouselCard";
 import Trend from "./Trend.jsx";
 import RecomendedMovies from "./RecomendedMovies.jsx";
-import Peaples from "./Peaples.jsx";
 
-import { movieUrlTrendsDay, movieUrlTrendsWeek } from "../../data/movies.js";
-import { tvShowUrlTrendsDay, tvShowUrlTrendsWeek } from "../../data/tvShows.js";
+import { movieUrlTrendsWeek } from "../../data/movies.js";
+import { tvShowUrlTrendsWeek } from "../../data/tvShows.js";
 
 const Home = () => {
   return (
@@ -26,7 +25,6 @@ const Home = () => {
             {/* Recomended Movies */}
             <div className="col-span-2">
               <RecomendedMovies />
-              {/* <Peaples /> */}
             </div>
           </div>
         </div>

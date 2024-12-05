@@ -1,30 +1,33 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useParams, useLocation, useSearchParams } from "react-router-dom";
 
-import { moviesUrl } from "../../data/movies";
-import { tvUrl } from "../../data/tvShows";
+import { moviesUrl, moviesUrlBySearch } from "../../data/movies";
+import { tvUrl, tvUrlBySearch } from "../../data/tvShows";
 import { options } from "../../data/data";
+
 import Card from "./Card";
+import PaginationBar from "./PaginationBar";
 
 const Cards = ({ type }) => {
   // Routing
   let location = useLocation();
-  // let { page } = useParams();
-  // let navigate = useNavigate();
+  let { pageId } = useParams();
+  const [searchParams] = useSearchParams();
 
   // Stats
   const [cards, setCards] = useState([]);
   const [loding, setLoding] = useState(true);
-  const [url, setUrl] = useState("");
-  // const [pageCount, setPageCount] = useState(500);
+  const [url] = useState("");
+  const [pageCount, setPageCount] = useState(500);
 
-  const fetchUrl = (url) => {
+  const fetchUrl = (url, search) => {
     setCards([]);
     axios
       .get(url, options.movies)
       .then((res) => {
-        // setPageCount(res.data.total_pages);
+        setPageCount(500);
+        search && setPageCount(0);
         setCards(res.data.results);
       })
       .catch((err) => {
@@ -36,20 +39,26 @@ const Cards = ({ type }) => {
 
   // Fetch data when the URL changes
   useEffect(() => {
-    // Fetching Data
     setLoding(true);
     setCards([]);
-    // setUrl(type === "movie" ? moviesUrl : tvUrl);
-    if (type === "movie") fetchUrl(moviesUrl);
-    else fetchUrl(tvUrl);
+
+    const searchTerm = searchParams.get("search");
+    if (searchTerm) {
+      if (type === "movie") fetchUrl(`${moviesUrlBySearch + searchTerm}`, true);
+      else fetchUrl(`${tvUrlBySearch + searchTerm}`, true);
+    } else {
+      if (type === "movie")
+        fetchUrl(`${moviesUrl + (pageId && "&page=" + pageId)}`);
+      else fetchUrl(`${tvUrl + (pageId && "&page=" + pageId)}`);
+    }
 
     // Scrool to top logic
     window.scrollTo(0, 0);
-  }, [url, location]);
+  }, [url, location, pageId, type, searchParams]);
 
   return (
     <>
-      <div className="grid md:grid-cols-4 grid-cols-2 md:gap-2 gap-1 items-center justify-between max-w-screen-xl p-4 m-0 mx-auto ">
+      <div className="min-h-[150vh] grid md:grid-cols-4 grid-cols-2 md:gap-2 gap-1 items-start justify-between max-w-screen-xl p-4 m-0 mx-auto ">
         {loding ? (
           [1, 2, 3, 4].map((i) => {
             return (
@@ -77,7 +86,7 @@ const Cards = ({ type }) => {
             {cards.map((card, i) => (
               <Card key={card.id} card={card} type={type} />
             ))}
-            {/* <PaginationBar pageCount={pageCount} /> */}
+            <PaginationBar pageCount={pageCount} />
           </>
         ) : (
           ""

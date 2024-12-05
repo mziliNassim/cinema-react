@@ -4,13 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { moviesUrl } from "../../data/movies";
 import useFetchAxios from "../../hooks/useFetchAxios";
 
-import PaginationBar from "../PaginationBar.jsx";
-import Lodin from "../Loding.jsx";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const RecomendedMovies = () => {
   const navigate = useNavigate();
-  const { data, loading } = useFetchAxios(`${moviesUrl}&page=3S`);
+  const { data, loading } = useFetchAxios(`${moviesUrl}&page=2`);
 
   return (
     <>
@@ -46,7 +44,7 @@ const RecomendedMovies = () => {
           </div>
         </>
       ) : (
-        <div className="">
+        <div className="min-h-[80vh]">
           {data !== null && data !== undefined && (
             <>
               <h1 className="flex items-center justify-start gap-2 my-8 text-2xl font-bold text-white">
@@ -80,10 +78,9 @@ const RecomendedMovies = () => {
                       </Link>
                     );
                   })}
-                  {/* <PaginationBar pageCount="10" /> */}
                   <div className="col-span-4">
                     <p
-                      onClick={() => navigate("/movies/")}
+                      onClick={() => navigate("/movies/1/")}
                       className="w-fit py-1 cursor-pointer px-4 my-5 mx-auto bg-gray-50 text-black rounded"
                     >
                       Show more...
